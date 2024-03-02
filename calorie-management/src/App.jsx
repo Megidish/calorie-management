@@ -1,5 +1,3 @@
-// App.jsx
-
 import React, { useState, useEffect } from 'react';
 import idb from './idb';
 
@@ -43,11 +41,11 @@ function App() {
       date: new Date().toISOString(),
     };
     idb.addItem(item).then(() => {
-      setItems([...items, item]); // Update items state
+      setItems([...items, item]); 
       setCalories('');
       setCategory(Category.BREAKFAST);
       setDescription('');
-      window.location.reload(); // Refresh the app
+      window.location.reload(); 
     });
   };
   
